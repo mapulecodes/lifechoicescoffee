@@ -22,13 +22,19 @@
 
 /* navbar */
 .navbar {
+    background-color: rgba(230, 183, 184, 0.807);
+    height: 150px;
+}
+.navbar {
 
     & img[alt='logo'] {
         width: 9rem;
-        height: auto; /* Maintain aspect ratio */
+        height: auto; /*this will maintain aspect ratio */
     }
 }
-/* Brown border for search bar */
+
+
+/* this adds a brown border for search bar */
 .form-control {
     border-color: brown;
   }
@@ -98,27 +104,38 @@
     text-decoration: none;
 }
 
-/* Form styling */
-#contact-newsletter-footer input[type="email"],
-#contact-newsletter-footer button {
-    background-color: #8B4513; /* Dark brown color */
-    color: #fff; /* White text color */
+/* Form for footer styling */
+#contact-us-footer input[type="email"],
+#contact-us-footer button {
+    background-color: #8B4513; 
+    color: #fff; /* text for form color */
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
     margin-right: 10px;
 }
 
-#contact-newsletter-footer input[type="email"] {
-    width: calc(70% - 10px); /* Adjusted width */
+#contact-us-footer input[type="email"] {
+    width: calc(70% - 10px); 
 }
 
 #contact-newsletter-footer button {
     width: 25%;
 }
 
-#contact-newsletter-footer button:hover {
-    background-color: #654321; /* Darker brown color on hover */
+#contact-us-footer button:hover {
+    background-color: #654321; 
 }
-
+/* carousel pictures */
+.carousel-item {
+    height: 100vh;
+  }
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .carousel-caption {
+    text-align: left;
+    margin-bottom: 220px;
+  }
 
