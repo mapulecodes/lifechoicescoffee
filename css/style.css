@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 *,
 *::after,
 *::before {
@@ -5,12 +6,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    background-color: #d2b48c; /* Milk coffee brown background */
+    font-family: "Playfair Display", serif;
+    margin: 0;
+    padding: 0;
+}
 ::-webkit-scrollbar {
     display: none;
 }
 
-/* display -> grid */
+/* display -the grid*/
 :is(body, .card) {
     display: grid;
 }
@@ -34,17 +40,17 @@
 }
 
 
-/* this adds a brown border for search bar */
+/* border for search */
 .form-control {
     border-color: brown;
   }
   
-  /* Font color for search button */
+  /* font colour-for search */
   .btn-outline-success {
     color: brown;
   }
   .footer {
-    background-color: #f5deb3; /* Light brown background */
+    background-color: #f5deb3; 
     padding: 20px 0;
 }
 
@@ -126,7 +132,7 @@
 #contact-us-footer button:hover {
     background-color: #654321; 
 }
-/* carousel pictures */
+/* carousel pictures-adjust the size again */
 .carousel-item {
     height: 100vh;
   }
@@ -138,4 +144,79 @@
     text-align: left;
     margin-bottom: 220px;
   }
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    margin-bottom: 1rem;
+}
+
+.btn-success {
+    background-color: #493208;
+    border-color: #cb477e;
+}
+
+.btn-success:hover {
+    background-color: #886021;
+    border-color: #7e1e74;
+}
+
+/* product grid */
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-col {
+    flex: 0 0 calc(33.33% - 20px);   /*remember do not change this it messes with visuals*/
+    max-width: calc(33.33% - 20px); 
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+/* policy */
+
+.container {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #3e2723; /* Dark brown color for headings */
+}
+
+p, ul {
+    color: #5d4037; /* Medium brown color for text */
+    line-height: 1.6;
+}
+
 
