@@ -57,4 +57,8 @@ function addToCart(product) {
 }
 
 // Example of current year display (to be integrated as needed)
+
 document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear();
+
+document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear();
+

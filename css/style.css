@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 *,
 *::after,
 *::before {
@@ -5,7 +6,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    background-color: #d2b48c; /* Milk coffee brown background */
+    font-family: "Playfair Display", serif;
+    margin: 0;
+    padding: 0;
+}
 ::-webkit-scrollbar {
     display: none;
 }
@@ -194,8 +200,25 @@
     box-sizing: border-box;
     padding: 0 10px;
 }
-body {
-    background-color: #f0f0f0; /* Replace with your desired color code */
+
+
+/* policy */
+
+.container {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #3e2723; /* Dark brown color for headings */
+}
+
+p, ul {
+    color: #5d4037; /* Medium brown color for text */
+    line-height: 1.6;
+
 }
 
 
