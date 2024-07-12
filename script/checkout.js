@@ -1,16 +1,19 @@
-// Selectors
 const checkoutContainer = document.querySelector('[checkoutContainer]');
 const checkoutCounter = document.querySelector('[counter]');
 
-// Retrieve checkout items from local storage
-let checkoutItems = JSON.parse(localStorage.getItem('checkout')) || [];
+//local storage
+let checkoutItems = [];
 
-// Function to display checkout items
-function displayCheckoutItems() {
-    checkoutContainer.innerHTML = ""; // Clear existing content
+let storeditems = localStorage.getItem("checkout")
+if(storeditems){
+    checkoutItems = JSON.parse(storeditems)
+}
+
+function displayCheckoutItems(items) {
+    checkoutContainer.innerHTML = ""; 
 
     try {
-        checkoutItems.forEach(item => {
+        items.forEach(item => {
             checkoutContainer.innerHTML += `
                 <div class="card mb-3">
                     <div class="card-body">
@@ -26,26 +29,27 @@ function displayCheckoutItems() {
     }
 }
 
-// Function to calculate total amount in cart
+displayCheckoutItems(storeditems)
+
+// calculate total amount in cart/checkout
 function calculateTotalAmount() {
     let total = 0;
     checkoutItems.forEach(item => {
         total += item.amount;
     });
-    return total.toFixed(2); // Ensure total amount is formatted to 2 decimal places
+    return total.toFixed(2);
 }
 
-// Function to initialize checkout page
 function initializeCheckoutPage() {
     displayCheckoutItems();
     updateCartCounter();
 }
 
-// Function to update cart counter
+// updates cart counter
 function updateCartCounter() {
     const cartCount = checkoutItems.length || 0;
     checkoutCounter.textContent = cartCount;
 }
 
-// Call initializeCheckoutPage function when window loads
+// this will initialize checkout page
 window.onload = initializeCheckoutPage;
